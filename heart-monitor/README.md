@@ -1,1 +1,1 @@
-
+You need an app on the phone that turns your phone into an RTSP camera, or an IP camera app for this to work. Use Periscope HD. I also recommend placing a lamp or a flashlight underneath the finger for the best results.
