@@ -131,10 +131,8 @@ def addPredictions(input_data):
     model = pickle.load(open("breast-cancer/model.pkl", "rb"))
     scaler = pickle.load(open("breast-cancer/scaler.pkl", "rb"))
     
-    input_array = np.array(list(input_data.values())).reshape(1, -1)
-    
+    input_array = pd.DataFrame([input_data])
     scaled_array = scaler.transform(input_array)
-    
     prediction = model.predict(scaled_array)
     
     if (prediction[0]==0): st.write("Benign")

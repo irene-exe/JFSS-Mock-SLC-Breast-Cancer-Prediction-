@@ -11,13 +11,13 @@ def createModel(data):
     
     scaler = StandardScaler()
     
-    # scales data
-    x = scaler.fit_transform(x)
-    
     # splits data
     x_train, x_test, y_train, y_test = train_test_split(
         x,y, test_size=0.2, random_state=42
     )
+    
+    x_train = scaler.fit_transform(x_train)
+    x_test = scaler.transform(x_test)
     
     # training the model
     model = LogisticRegression()
